@@ -1,4 +1,5 @@
 import br.com.dio.desafio.dominio.Bootcamp;
+import br.com.dio.desafio.dominio.Certificado;
 import br.com.dio.desafio.dominio.Curso;
 import br.com.dio.desafio.dominio.Dev;
 import br.com.dio.desafio.dominio.Mentoria;
@@ -11,11 +12,19 @@ public class Main {
         curso1.setTitulo("curso java");
         curso1.setDescricao("descrição curso java");
         curso1.setCargaHoraria(8);
-
+        
         Curso curso2 = new Curso();
         curso2.setTitulo("curso js");
         curso2.setDescricao("descrição curso js");
         curso2.setCargaHoraria(4);
+        
+        Certificado certificado1 = new Certificado();
+        certificado1.setCurso("Curso Java");
+        certificado1.setCargaHoraria(8);
+        
+        Certificado certificado2 = new Certificado();
+        certificado2.setCurso("Curso js");
+        certificado2.setCargaHoraria(8);
 
         Mentoria mentoria = new Mentoria();
         mentoria.setTitulo("mentoria de java");
@@ -42,6 +51,8 @@ public class Main {
         System.out.println("-");
         System.out.println("Conteúdos Inscritos Camila:" + devCamila.getConteudosInscritos());
         System.out.println("Conteúdos Concluídos Camila:" + devCamila.getConteudosConcluidos());
+        System.out.println("Certificados Camila:" + certificado1.getCurso() + " - " + certificado1.getCargaHoraria());
+        System.out.println("Certificados Camila:" + certificado2.getCurso() + " - " + certificado2.getCargaHoraria());
         System.out.println("XP:" + devCamila.calcularTotalXp());
 
         System.out.println("-------");
@@ -56,6 +67,8 @@ public class Main {
         System.out.println("-");
         System.out.println("Conteúdos Inscritos João:" + devJoao.getConteudosInscritos());
         System.out.println("Conteúdos Concluidos João:" + devJoao.getConteudosConcluidos());
+        System.out.println("Certificados Jo�o:" + certificado1.getCurso() + " - " + certificado1.getCargaHoraria());
+        System.out.println("Certificados Jo�o:" + certificado2.getCurso() + " - " + certificado2.getCargaHoraria());
         System.out.println("XP:" + devJoao.calcularTotalXp());
 
     }
